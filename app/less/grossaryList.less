@@ -1,0 +1,83 @@
+@halfDutchWhite: #FFF4D5;
+@terraCotta: #E17055;
+@tarawera: #2C3A47;
+
+body {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 150%;
+  font-family: Arial, Helvetica, sans-serif;
+  color: @tarawera;
+}
+
+/* Grossery List Layout */
+
+.grosseryListCont {
+  max-width: 980px;
+  text-align: center;
+  .grossery-holder {
+    display: flex;
+    flex-flow: row wrap;
+    list-style: none;
+    margin: 0rem;
+    padding: 0rem;
+    li { 
+      display: flex;
+      flex-direction: column;
+      flex: 1 19%;
+      background-color: @halfDutchWhite;
+      border-bottom: 0.125rem solid @terraCotta;
+      border-right: 0.125rem solid @terraCotta;
+      margin: 0 0.9375rem 1.875rem 0.9375rem;
+      padding: 0.625rem;
+      text-align: left;
+    }
+    .category { //Category text Style 
+      color: @terraCotta;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+    .type { //type text tyle
+      color: @tarawera;
+    }
+    .item { //item text Style
+      color: @terraCotta;
+      text-transform: capitalize;
+      font-size:1.5rem;
+    }
+    .brand { //brand text Style
+      color: @tarawera;
+    }
+    .qty { //qty text Style
+      color: @tarawera;
+      text-align: right;
+    }
+  }
+}
+
+// Medium Devices (768 to 1024 pixels)
+@media only screen 
+  and (min-width: 768px) 
+  and (max-width: 1024px) {
+  .grosseryListCont {
+    .grossery-holder {
+      li {
+        flex: 1 18%;
+      }
+    }
+  }
+}
+
+// Small Devices (0 to 767 pixels)
+@media only screen 
+  and (min-width: 0px) 
+  and (max-width: 767px) {
+  .grosseryListCont {
+    .grossery-holder {
+      li {
+        flex: 1 100%;
+        margin: 0 0rem 1.875rem 0;
+      }
+    }
+  }
+}

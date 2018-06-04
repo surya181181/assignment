@@ -1,0 +1,61 @@
+body {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 150%;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #2C3A47;
+}
+/* Grossery List Layout */
+.grosseryListCont {
+  max-width: 980px;
+  text-align: center;
+}
+.grosseryListCont .grossery-holder {
+  display: flex;
+  flex-flow: row wrap;
+  list-style: none;
+  margin: 0rem;
+  padding: 0rem;
+}
+.grosseryListCont .grossery-holder li {
+  display: flex;
+  flex-direction: column;
+  flex: 1 19%;
+  background-color: #FFF4D5;
+  border-bottom: 0.125rem solid #E17055;
+  border-right: 0.125rem solid #E17055;
+  margin: 0 0.9375rem 1.875rem 0.9375rem;
+  padding: 0.625rem;
+  text-align: left;
+}
+.grosseryListCont .grossery-holder .category {
+  color: #E17055;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+.grosseryListCont .grossery-holder .type {
+  color: #2C3A47;
+}
+.grosseryListCont .grossery-holder .item {
+  color: #E17055;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+}
+.grosseryListCont .grossery-holder .brand {
+  color: #2C3A47;
+}
+.grosseryListCont .grossery-holder .qty {
+  color: #2C3A47;
+  text-align: right;
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .grosseryListCont .grossery-holder li {
+    flex: 1 18%;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .grosseryListCont .grossery-holder li {
+    flex: 1 100%;
+    margin: 0 0rem 1.875rem 0;
+  }
+}
